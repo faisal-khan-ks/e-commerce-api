@@ -1,5 +1,5 @@
-const Order = require('../models/order.model');
-const OrderItem = require('../models/order_item.model');
+const Order = require('../models/order');
+const OrderItem = require('../models/order_item');
 
 module.exports = {
     //Create Order

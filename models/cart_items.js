@@ -1,5 +1,5 @@
 const sequelize = require('sequelize');
-const db = require('../config/database');
+const db = require('../database/db');
 
 const CartItem = db.define('cart_item', {
     id: {
