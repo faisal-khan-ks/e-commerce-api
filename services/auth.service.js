@@ -39,4 +39,21 @@ module.exports = {
             return { error: error.message };
         }
     },
+
+    verifyToken: async (token) => {
+        try {
+            const decoded = jwt.verify(token, process.env.JWT_SECRET);
+            if (!decoded) {
+                throw new Error('Invalid Token!!!');
+            }
+            return {
+                message: 'Token is valid',
+                userId: decoded.id,
+                email: decoded.email,
+                userType: decoded.user_type
+            };
+        } catch (error) {
+            return { error: error.message };
+        }
+    },
 }
