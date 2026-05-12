@@ -10,7 +10,6 @@ module.exports = {
             return products;
         }
         catch (error) {
-            console.log(error)
             throw new Error('Error fetching products: ' + error.message);
         }
     },
